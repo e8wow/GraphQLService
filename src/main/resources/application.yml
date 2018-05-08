@@ -1,0 +1,43 @@
+server:
+  port: 80
+  address: 127.0.0.1
+  tomcat:
+    protocol-header: x-forwarded-proto
+  use-forward-headers: true
+spring:
+  application:
+    name: GraphQL Service
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/e8wow?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: Lhc.8507981168
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    max-active: 20
+    initial-size: 1
+    min-idle: 3
+    max-wait: 60000
+    time-between-eviction-runs-millis: 60000
+    min-evictable-idle-time-millis: 300000
+    test-while-idle: true
+    test-on-borrow: false
+    test-on-return: false
+  http:
+    multipart:
+      enabled: true
+      max-file-size: 15MB
+#  redis:
+#    host: localhost
+#    port: 6379
+#    password: root
+#    pool:
+#      max-active: 8
+#      max-wait: 1
+#      max-idle: 8
+#      min-idle: 0
+#    timeout: 0
+#  logging:
+#    config: log4j2.xml
+
+debug: true

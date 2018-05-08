@@ -1,0 +1,7 @@
+type Author {
+    id: Long!
+    username: String
+    password: String
+    nickname: String
+    mobile: String
+}
